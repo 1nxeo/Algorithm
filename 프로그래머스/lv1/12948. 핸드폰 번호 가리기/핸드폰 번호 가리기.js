@@ -1,13 +1,14 @@
 function solution(phone_number) {
     let answer = '';
-    let password = '';
-    for (i=0;i<phone_number.length-4;i++){
-        password +='*'
+    let number ='';
+    for(i=0;i<phone_number.length-4;i++){
+        number += '*'
     }
-    for (i=phone_number.length-4;i<phone_number.length;i++){
-        password += phone_number[i]
+        
+    for(i=phone_number.length-4;i<phone_number.length;i++){
+        number += phone_number[i]
     }
-    
-    answer = password
+    console.log(number)
+    answer = number
     return answer;
 }
