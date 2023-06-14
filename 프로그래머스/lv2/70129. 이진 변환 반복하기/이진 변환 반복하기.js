@@ -20,3 +20,21 @@ function solution(s) {
     
     return answer;
 }
+
+
+
+// 조금 더 가독성 높고 효율적인 코드라고 생각되는 것
+function solution(s) {
+  let count = 0;
+  let zeroCount = 0;
+  
+  while (s.length > 1) {
+    const zeroDeleted = s.split("0").length - 1;
+    zeroCount += zeroDeleted;
+    s = s.split("0").join("");
+    s = s.length.toString(2);
+    count++;
+  }
+  
+  return [count, zeroCount];
+}
